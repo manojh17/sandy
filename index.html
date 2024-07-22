@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. Sudharsanam Portfolio</title>
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.title p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 1em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.qr-codes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.qr-code img:hover {
+    transform: rotate(10deg);
+}
+
+.qr-code p {
+    margin: 0;
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.works img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.works img:hover {
+    transform: scale(1.05);
+}
+
+.side-text {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.2em;
+    color: #ffffff;
+    opacity: 0;
+    animation: slideInFromRight 1s forwards;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin: 5px 0;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+    width: 48%;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.left-column h2,
+.right-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.left-column p,
+.right-column p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.software-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.software-icons img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.software-icons img:hover {
+    transform: rotate(-10deg);
+}
+
+.qr-codes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.qr-code img:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page" id="page1">
+        <div class="container">
+            <div class="title">
+                <h1>A. Sudharsanam Portfolio</h1>
+                <p>Photography, Editing, & Content Creator</p>
+            </div>
+            <div class="image-container">
+                <img src="/ profileimg.webp" alt="Profile Image">
+            </div>
+            <div class="footer">
+                <p>BSc Viscom at DRBCCC Hindu College.</p>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="/ im._.shutterbug._.08_qr.png" alt="Shutter Bug QR Code">
+                        <p>Shutter Bug</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="/ pheraspixel_qr.png" alt="Pheras Pixel QR Code">
+                        <p>Pheras Pixel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+        <div class="container">
+            <h2>MY WORKS</h2>
+            <div class="works">
+                <img src=" work2.webp" alt="Work 1">
+                <img src=" work1.webp" alt="Work 2">
+                <img src=" work3.webp" alt="Work 3">
+                <img src=" work4.webp" alt="Work 4">
+                <img src=" work5.webp" alt="Work 5">
+                <img src=" work6.webp" alt="Work 6">
+                <img src=" work7.webp" alt="Work 7">
+                <img src=" work8.webp" alt="Work 8">
+                <img src=" work10.webp" alt="Work 9">
+            </div>
+            <div class="side-text">
+                <p>EXPLORE</p>
+                <p>CREATE</p>
+                <p>INSPIRE</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3">
+        <div class="container">
+            <div class="header">
+                <div class="contact-info">
+                    <p>LOCATION: Chennai, TN</p>
+                    <p>PHONE: +91 9361850993</p>
+                    <p>E-MAIL: a.sudharsanam143@gmail.com</p>
+                </div>
+                <h1>A. Sudharsanam</h1>
+                <p>Photographer | Editor</p>
+                <p>Interested in Film Making</p>
+            </div>
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="education">
+                        <h2>EDUCATION</h2>
+                        <p>B.Sc Visual Communication, DRBCCC Hindu College (2021 - 2024)</p>
+                    </div>
+                    <div class="achievements">
+                        <h2>ACHIEVEMENTS</h2>
+                        <p>1st runner-up - 46 Shades Art Exhibition & Competition at DRBCCC Hindu College</p>
+                    </div>
+                    <div class="languages">
+                        <h2>LANGUAGES</h2>
+                        <p>Tamil | Telugu | English</p>
+                    </div>
+                    <div class="software">
+                        <h2>SOFTWARES KNOWN</h2>
+                        <div class="software-icons">
+                            <img src="/ afterefeects.gif" alt="Photoshop">
+                            <img src="/ prepro.gif" alt="Premiere">
+                            <img src="/ illu.gif" alt="Illustrator">
+                            <img src="/ lr.gif" alt="Lightroom">
+                            <img src="/ dream.gif" alt="Dreamweaver">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="experience">
+                        <h2>EXPERIENCE</h2>
+                        <p>Event Photographer - Worked in more than 6 events in 2023-2024</p>
+                    </div>
+                    <div class="freelance">
+                        <h2>PHERAS PIXEL</h2>
+                        <p>Started a photography freelance studio named Pheras Pixel 2023</p>
+                    </div>
+                    <div class="creators">
+                        <h2>CREATORS</h2>
+                        <p>SHEDHU RAM</p>
+                        <p>A. SUDHARSANAM</p>
+                    </div>
+                    <div class="qr-codes">
+                        <div class="qr-code">
+                            <img src="/ im._.shutterbug._.08_qr.png" alt="Shutter Bug QR Code">
+                            <p>Shutter Bug</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="/ pheraspixel_qr.png" alt="Pheras Pixel QR Code">
+                            <p>Pheras Pixel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
